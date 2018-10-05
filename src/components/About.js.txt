@@ -1,0 +1,39 @@
+/*
+ * @link https://www.algernon.io/
+ * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ */
+
+import React, { Component } from "react";
+import AppStyles from "../styles";
+
+class About extends Component {
+  render() {
+    return (
+      <div style={AppStyles.mainWindow}>
+        <div style={AppStyles.titleText}>
+          About
+        </div>
+        <div style={AppStyles.content}>
+          <p>
+            Algernon is a minimalist task manager that allows you to create
+            and sync tasks across devices. The entire application is
+            {" "}
+            <a href="https://github.com/AlgernonLabs">
+              developed in the open
+            </a>
+            {" "}
+            by a small team who values your privacy and
+            {" "}
+            <a href="mailto:hello@algernon.io">
+              encourages your
+              feedback
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default About;
