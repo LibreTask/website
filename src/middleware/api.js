@@ -6,7 +6,7 @@
 import RetryableError from "./errors/RetryableError";
 import ErrorCodes from "./errors/ErrorCodes";
 
-const API_ROOT = "localhost:3001"//"https://algernon.io";
+const API_ROOT = "http://localhost:3001"//"https://algernon.io";
 
 const MAX_RETRIES = 3;
 
@@ -55,6 +55,9 @@ export function invoke(request, retriesRemaining) {
 
   const fullUrl =
     endpoint.indexOf(API_ROOT) === -1 ? API_ROOT + endpoint : endpoint;
+
+    console.dir(headers)
+    console.log("full url: " + fullUrl)
 
   let response = _invoke(fullUrl, method, headers, body);
 

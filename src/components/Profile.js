@@ -42,6 +42,13 @@ const styles = {
   },
   controlLabel: {
     fontSize: "120%"
+  },
+  deleteAccountText: {
+    color: AppStyles.linkOnBackgroundColor,
+    cursor: "pointer",
+    fontSize: "110%",
+    paddingTop: 15,
+    textAlign: "center"
   }
 };
 
@@ -304,12 +311,20 @@ class Profile extends Component {
               >
                 Update Account
               </Button>
+
+              <div
+                className="underline_on_hover"
+                style={styles.deleteAccountText}
+                onClick={() => {
+                  this.setState({ deleteAccountDialogIsOpen: true });
+                }}
+              >
                 Delete Account
+              </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

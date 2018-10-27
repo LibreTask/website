@@ -8,3 +8,8 @@ npm start -- do this from the website directory
 UPDATE: for now, running "npm start" alongside "webpack" is insufficient.
 to run locally, remove webpack from package.json, reinstall node_modules,
 and then run "npm start"
+
+
+# Dev browsers
+
+open -a Google\ Chrome --args --disable-web-security --user-data-dir=""
