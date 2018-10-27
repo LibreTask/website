@@ -33,14 +33,6 @@ const styles = {
     fontSize: "170%",
     textAlign: "center"
   },
-  downgradeText: {
-    color: AppStyles.linkOnBackgroundColor,
-    cursor: "pointer",
-    fontSize: "100%",
-    textAlign: "center",
-    paddingTop: 10,
-    paddingBottom: 10
-  },
   accountDeletionDialog: {
     overflow: "visible",
     height: 120 // TODO - fix this hack, so that buttons are visible
@@ -63,8 +55,7 @@ class Profile extends Component {
       successMessage: "",
       errorMessage: "",
       isUpdatingProfile: false,
-      deleteAccountDialogIsOpen: false,
-      downgradeAccountDialogIsOpen: false
+      deleteAccountDialogIsOpen: false
     };
   }
 
@@ -110,18 +101,6 @@ class Profile extends Component {
             });
           });
       }
-    );
-  };
-
-  // TODO - move to utils-or-similar
-  _hasPremiumSubscription = () => {
-    let today = new Date();
-
-    return (
-      this.props.profile &&
-      this.props.profile.currentPlan &&
-      this.props.profile.currentPlan === "premium" &&
-      new Date(this.props.profile.planExpirationDateTimeUtc) > today
     );
   };
 
@@ -218,174 +197,6 @@ class Profile extends Component {
     );
   };
 
-  _downgradeAccount = () => {
-    this.setState(
-      {
-        successMessage: "",
-        errorMessage: "",
-        emailValidationError: ""
-      },
-      () => {
-        Client.downgradeAccount(this.props.profile)
-          .then(response => {
-            if (response.errorCode) {
-              this.setState({
-                errorMessage: response.errorMessage
-              });
-            } else {
-              let updatedProfile = this.props.profile;
-              updatedProfile.currentPlan = "basic";
-              this.props.updateProfile(updatedProfile);
-              ProfileController.createOrUpdateProfile(updatedProfile);
-
-              this.setState(
-                {
-                  successMessage: "Your account has been downgraded"
-                },
-                () => {
-                  setTimeout(() => {
-                    this.setState({ successMessage: "" });
-                  }, 1000 * 3); // only display success message for three seconds
-                }
-              );
-            }
-          })
-          .catch(error => {
-            this.setState({
-              errorMessage: error.message
-            });
-          });
-      }
-    );
-  };
-
-  _onPaymentInfoUpdate = token => {
-    let stripeToken = token.id;
-    let paymentMethodId = token.card.id; // auto-generated credit card identifier
-
-    this.setState(
-      {
-        successMessage: "",
-        errorMessage: ""
-      },
-      () => {
-        Client.updatePaymentInfo(
-          this.props.profile,
-          stripeToken,
-          paymentMethodId
-        )
-          .then(response => {
-            if (response.errorCode) {
-              this.setState(
-                {
-                  errorMessage: response.errorMessage
-                },
-                () => {
-                  setTimeout(() => {
-                    this.setState({ errorMessage: "" });
-                  }, 1000 * 3); // only display error message for three seconds
-                }
-              );
-            } else {
-              this.setState(
-                {
-                  successMessage: "Your payment info has been updated"
-                },
-                () => {
-                  setTimeout(() => {
-                    this.setState({ successMessage: "" });
-                    browserHistory.push("/profile"); // login required
-                  }, 1000 * 3); // only display success message for three seconds
-                }
-              );
-            }
-          })
-          .catch(error => {
-            this.setState(
-              {
-                errorMessage: error.message
-              },
-              () => {
-                setTimeout(() => {
-                  this.setState({ errorMessage: "" });
-                }, 1000 * 3); // only display error message for three seconds
-              }
-            );
-          });
-      }
-    );
-  };
-
-  _constructAccountUpgradeDowngradeButton = () => {
-    if (this._hasPremiumSubscription()) {
-      return (
-        <span>
-          {/*
-            Remember me just saves info locally. We do not find that
-            useful, so do not do it.
-          */}
-          {/*
-          <StripeCheckout
-            token={this._onPaymentInfoUpdate}
-            email={
-              this.props.profile && this.props.profile.email
-                ? this.props.profile.email
-                : ""
-            }
-            name="Algernon"
-            allowRememberMe={false}
-            panelLabel="Update Payment Info"
-            description="Upgrade Payment Info"
-            image={
-              "https://stripe.com/img/documentation/checkout/marketplace.png"
-            }
-            locale="auto"
-            zipCode={true}
-            stripeKey="pk_test_yv9mjFfNwC5ac7RHCbCg3jgf"
-          >
-            <Button
-              className="form_button"
-              style={AppStyles.formButton}
-              bsStyle="primary"
-              bsSize="large"
-            >
-              Update Payment Info
-            </Button>
-          </StripeCheckout>
-          */}
-          <form
-            id="checkout-form"
-            action="/api/v1/user/update-payment-info"
-            method="POST"
-          />
-          <div
-            className="underline_on_hover"
-            style={styles.downgradeText}
-            onClick={() => {
-              this.setState({ downgradeAccountDialogIsOpen: true });
-            }}
-          >
-            Downgrade Account
-          </div>
-        </span>
-      );
-    } else {
-      return (
-        <Button
-          className="form_button"
-          style={AppStyles.formButton}
-          bsStyle="primary"
-          bsSize="large"
-          onClick={() => {
-            browserHistory.push("/profile/upgrade");
-          }}
-        >
-          Learn about Premium
-        </Button>
-      );
-    }
-  };
-
   /*
     This function assumes that an errorMessage and
     successMessage cannot exist simultaneously.
@@ -439,81 +250,9 @@ class Profile extends Component {
     );
   };
 
-  _constructProfileDowngradeDialog = () => {
-    // TODO - improve wording
-
-    let planExpirationDateTimeUtc = this.state.updatedProfile
-      .planExpirationDateTimeUtc;
-
-    let formattedExpirationDate = planExpirationDateTimeUtc
-      ? moment(planExpirationDateTimeUtc).format("LLLL")
-      : "An error has occurred, please check back later";
-
-    return (
-      <div style={styles.profileModal}>
-        <Modal
-          show={this.state.downgradeAccountDialogIsOpen}
-          onHide={() => {
-            this.setState({ downgradeAccountDialogIsOpen: false });
-          }}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">
-              Downgrade Account
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            Are you sure you want to downgrade your account? This will stop the
-            recurring subscription. Your subscription will expire on&nbsp;
-            <b> {formattedExpirationDate} </b>.
-          </Modal.Body>
-          <Modal.Footer>
-            <Button
-              onClick={() => {
-                this.setState({ downgradeAccountDialogIsOpen: false });
-              }}
-            >
-              Close
-            </Button>
-            <Button
-              onClick={() => {
-                this.setState({ downgradeAccountDialogIsOpen: false });
-                this._downgradeAccount();
-              }}
-            >
-              Yes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  };
-
   emailValidationState = () => {
     // no status, if no error
     return this.state.emailValidationError ? "error" : null;
-  };
-
-  _expirationDateDisplay = () => {
-    if (this._hasPremiumSubscription()) {
-      let planExpirationDateTimeUtc = this.state.updatedProfile
-        .planExpirationDateTimeUtc;
-
-      let formattedExpirationDate = planExpirationDateTimeUtc
-        ? moment(planExpirationDateTimeUtc).format("LLLL")
-        : "An error has occurred, please check back later";
-
-      return (
-        <FormGroup>
-          <ControlLabel style={styles.controlLabel}>
-            Premium Plan Expiration
-          </ControlLabel>
-          <FormControl.Static>{formattedExpirationDate}</FormControl.Static>
-        </FormGroup>
-      );
-    } else {
-      return <span />; // no premium subscription; nothing to display
-    }
   };
 
   _profileUpdateForm = () => {
@@ -537,9 +276,6 @@ class Profile extends Component {
           <FormControl.Feedback />
           <HelpBlock>{this.state.emailValidationError}</HelpBlock>
         </FormGroup>
-        {/* NOTE - disable expiration display during beta
-        {this._expirationDateDisplay()}
-        */}
       </form>
     );
   };
@@ -551,8 +287,6 @@ class Profile extends Component {
           {this._constructMessageBanner()}
 
           {this._constructProfileDeletionDialog()}
-
-          {this._constructProfileDowngradeDialog()}
 
           <div>
             <div style={styles.titleText}>Profile</div>
@@ -570,19 +304,6 @@ class Profile extends Component {
               >
                 Update Account
               </Button>
-
-              {/*
-                NOTE - disable upgrade/downgrade logic during beta
-
-              {this._constructAccountUpgradeDowngradeButton()}
-              */}
-              <div
-                className="underline_on_hover"
-                style={styles.downgradeText}
-                onClick={() => {
-                  this.setState({ deleteAccountDialogIsOpen: true });
-                }}
-              >
                 Delete Account
               </div>
             </div>

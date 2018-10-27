@@ -33,16 +33,16 @@ module.exports = {
       : [],
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader:
+        use:
           "babel-loader?presets[]=es2015&presets[]=react,presets[]=stage-2"
       },
       {
         test: /\.json$/,
-        loader: "json-loader"
+        use: "json-loader"
       }
     ]
   },

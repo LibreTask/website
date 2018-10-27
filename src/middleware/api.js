@@ -6,7 +6,7 @@
 import RetryableError from "./errors/RetryableError";
 import ErrorCodes from "./errors/ErrorCodes";
 
-const API_ROOT = "https://algernon.io";
+const API_ROOT = "localhost:3001"//"https://algernon.io";
 
 const MAX_RETRIES = 3;
 
@@ -23,6 +23,10 @@ export function constructAuthHeader(userId, password) {
 // TODO - move this to its own module
 // TODO - use a hash for this
 function humanReadableError(errorCode) {
+
+  console.log("error...")
+  console.dir(errorCode)
+
   try {
     if (errorCode === ErrorCodes.USER_DOES_NOT_EXIST) {
       return "That user does not exist";
