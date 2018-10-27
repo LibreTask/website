@@ -64,10 +64,6 @@ const styles = {
     borderRadius: 5,
     overflow: "hidden"
   },
-  greenCheck: {
-    fontSize: "160%",
-    color: "green"
-  },
   tableHeader: {
     fontSize: "120%",
     fontWeight: "bold",
@@ -100,6 +96,14 @@ const styles = {
     textAlign: "center",
     paddingTop: 5,
     paddingBottom: 20
+  },
+  whiteSectionSmallText: {
+    color: AppStyles.textOnMainColor,
+    fontSize: "100%",
+    margin: "auto",
+    textAlign: "center",
+    paddingTop: 5,
+    paddingBottom: 5
   },
   blackSectionSmallText: {
     color: AppStyles.textOnMainColor,
@@ -156,10 +160,6 @@ const styles = {
     float: "none",
     display: "inline-flex",
     verticalAlign: "top"
-  },
-  premiumText: {
-    fontSize: "110%",
-    color: "green"
   }
 };
 
@@ -323,74 +323,9 @@ class Home extends Component {
           </Row>
           <Row style={styles.blackRow}>
             <Col>
-              <div style={styles.whiteSectionText}>Pricing</div>
+              <div style={styles.whiteSectionText}>Get it now</div>
+              <div style={styles.whiteSectionSmallText}>No payment or signup required!</div>
             </Col>
-            <Col>
-              <div style={styles.rowElementImage}>
-                <Table striped bordered condensed style={styles.pricingTable}>
-                  <thead>
-                    <tr>
-                      <th style={styles.tableHeader}>Features</th>
-                      <th style={styles.tableHeader}>Basic</th>
-                      <th style={styles.tableHeader}>Premium</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mobile and desktop apps</td>
-                      <td style={styles.greenCheck}>✓</td>
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    <tr>
-                      <td>Unlimited task creation</td>
-                      <td style={styles.greenCheck}>✓</td>
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    <tr>
-                      <td>Offline usage</td>
-                      <td style={styles.greenCheck}>✓</td>
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    {/*
-                    <tr>
-                      <td>Open source</td>
-                      <td style={styles.greenCheck}>✓</td>
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    */}
-                    <tr>
-                      <td>Sync across devices</td>
-                      <td />
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    <tr>
-                      <td>Unlimited backup</td>
-                      <td />
-                      <td style={styles.greenCheck}>✓</td>
-                    </tr>
-                    <tr>
-                      <td>Price</td>
-                      <td>Free</td>
-                      <td>
-                        <strike>
-                          ${AppConstants.PREMIUM_COST_IN_DOLLARS} / year
-                        </strike>
-                        <br />
-                        <span style={styles.premiumText}>Free during beta</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
-            </Col>
-          </Row>
-          <Row style={styles.whiteRowNoBottomPadding}>
-            <Col>
-              <div style={styles.blackSectionText}>Get it now</div>
-              <div>No payment or signup required!</div>
-            </Col>
-          </Row>
-          <Row style={styles.whiteRow}>
             <Col style={styles.column} sm={6} md={4}>
               {desktopDownloadButton}
             </Col>
