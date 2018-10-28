@@ -1,6 +1,6 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import React, { Component } from "react";
@@ -69,7 +69,7 @@ const styles = {
     fontWeight: "bold",
     textAlign: "center"
   },
-  algernonDemo: {
+  libretaskDemo: {
     width: "100%",
     height: "100%",
 
@@ -128,6 +128,14 @@ const styles = {
     textAlign: "center",
     paddingTop: 30,
     paddingBottom: 30
+  },
+  blackRow10Padding: {
+    backgroundColor: "black",
+    margin: "auto",
+    width: "100%",
+    textAlign: "center",
+    paddingTop: 10,
+    paddingBottom: 10
   },
   whiteRow: {
     backgroundColor: AppStyles.backgroundColor,
@@ -246,9 +254,9 @@ class Home extends Component {
             <Col style={styles.column} sm={10} md={5}>
               <div style={styles.rowElementImage}>
                 <Image
-                  style={styles.algernonDemo}
-                  alt="Algernon desktop application"
-                  src="../images/algernon_demo.gif"
+                  style={styles.libretaskDemo}
+                  alt="LibreTask desktop application"
+                  src="../images/libretask_demo.gif"
                   rounded
                 />
               </div>
@@ -265,7 +273,7 @@ class Home extends Component {
                 <img
                   src="../images/list.png"
                   style={styles.featureIcon}
-                  alt="Algernon list diagram"
+                  alt="LibreTask list diagram"
                 />
 
                 <div style={styles.rowElementFont}>Organize your goals</div>
@@ -276,7 +284,7 @@ class Home extends Component {
                 <img
                   src="../images/sync.png"
                   style={styles.featureIcon}
-                  alt="Algernon sync diagram"
+                  alt="LibreTask sync diagram"
                 />
 
                 <div style={styles.rowElementFont}>Sync across devices</div>
@@ -289,7 +297,7 @@ class Home extends Component {
                 <img
                   src="../images/backup.png"
                   style={styles.featureIcon}
-                  alt="Algernon backup diagram"
+                  alt="LibreTask backup diagram"
                 />
 
                 <div style={styles.rowElementFont}>Backup unlimited tasks</div>
@@ -300,14 +308,14 @@ class Home extends Component {
                 <img
                   src="../images/offline.png"
                   style={styles.featureIcon}
-                  alt="Algernon offline diagram"
+                  alt="LibreTask offline diagram"
                 />
 
                 <div style={styles.rowElementFont}>Work completely offline</div>
                 {/*
                 <div style={styles.rowElementImage}>
                   <Image
-                    alt="Algernon open source diagram"
+                    alt="LibreTask open source diagram"
                     src="../images/opensource.png"
                     rounded
                   />
@@ -326,16 +334,20 @@ class Home extends Component {
               <div style={styles.whiteSectionText}>Get it now</div>
               <div style={styles.whiteSectionSmallText}>No payment or signup required!</div>
             </Col>
+          </Row>
+          <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={6} md={4}>
               {desktopDownloadButton}
             </Col>
+          </Row>
+          <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={6} md={4}>
               <div style={styles.nonPaddedRowElementContent}>
                 <div style={styles.rowElementImage}>
                   <a href={AppConstants.ANDROID_DOWNLOAD_LINK}>
                     <Image
                       style={AppStyles.downloadButton}
-                      alt="Algernon Android download image"
+                      alt="LibreTask Android download image"
                       src="../images/android.png"
                       rounded
                     />
@@ -350,7 +362,7 @@ class Home extends Component {
                   <a href={AppConstants.IOS_DOWNLOAD_LINK}>
                     <Image
                       style={styles.downloadButton}
-                      alt="Algernon iOS download image"
+                      alt="LibreTask iOS download image"
                       src="../images/ios.svg"
                       rounded
                     />

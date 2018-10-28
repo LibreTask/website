@@ -1,6 +1,6 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import React, { Component } from "react";
@@ -15,16 +15,16 @@ class About extends Component {
         </div>
         <div style={AppStyles.content}>
           <p>
-            Algernon is a minimalist task manager that allows you to create
+            LibreTask is a minimalist task manager that allows you to create
             and sync tasks across devices. The entire application is
             {" "}
-            <a href="https://github.com/AlgernonLabs">
+            <a href="https://github.com/LibreTask">
               developed in the open
             </a>
             {" "}
             by a small team who values your privacy and
             {" "}
-            <a href="mailto:hello@algernon.io">
+            <a href="mailto:hello@libretask.org">
               encourages your
               feedback
             </a>

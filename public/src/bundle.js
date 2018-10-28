@@ -7357,8 +7357,8 @@ var AppStyles = {
     textAlign: "center"
   }
 }; /*
-    * @link https://www.algernon.io/
-    * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+    * @link https://libretask.org/
+    * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
     */
 
 // GOOD BLACK 272727
@@ -11346,8 +11346,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.show = show;
 exports.hide = hide;
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 var FOOTER_SHOW = exports.FOOTER_SHOW = "FOOTER_SHOW";
@@ -11379,8 +11379,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.show = show;
 exports.hide = hide;
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 var HEADER_SHOW = exports.HEADER_SHOW = "HEADER_SHOW";
@@ -11535,8 +11535,8 @@ var login = exports.login = function login(email, password) {
 
   return (0, _api.invoke)(request);
 }; /*
-    * @link https://www.algernon.io/
-    * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+    * @link https://libretask.org/
+    * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
     */
 
 var signup = exports.signup = function signup(email, password) {
@@ -12364,8 +12364,8 @@ exports.cleanProfileStorage = cleanProfileStorage;
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 function createOrUpdateProfile(profile) {
@@ -12394,8 +12394,8 @@ exports.login = login;
 exports.logout = logout;
 exports.updateProfile = updateProfile;
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 var LOGIN = exports.LOGIN = "LOGIN";
@@ -12654,8 +12654,8 @@ var AppValidator = {
     return _validator2.default.isLength(password, { min: 6, max: 100 });
   }
 }; /*
-    * @link https://www.algernon.io/
-    * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+    * @link https://libretask.org/
+    * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
     */
 
 exports.default = AppValidator;
@@ -20063,24 +20063,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 var AppConstants = {
-  APP_NAME: "Algernon",
+  APP_NAME: "LibreTask",
   FOOTER_HEIGHT: 60,
   PREMIUM_COST_IN_CENTS: 1400, // 14 dollars
   PREMIUM_COST_IN_DOLLARS: 14,
 
-  CONTACT_FORM_FROM_EMAIL: "hello@algernon.io",
+  CONTACT_FORM_FROM_EMAIL: "hello@libretask.org",
 
-  ANDROID_DOWNLOAD_LINK: "https://play.google.com/store/apps/details?id=com.algernon",
-  MAC_DOWNLOAD_LINK: "/downloads/Algernon.dmg",
-  LINUX_DOWNLOAD_LINK: "/downloads/Algernon.AppImage",
-  WINDOWS_DOWNLOAD_LINK: "/downloads/Algernon.exe",
+  ANDROID_DOWNLOAD_LINK: "https://play.google.com/store/apps/details?id=org.libretask",
+  MAC_DOWNLOAD_LINK: "/downloads/LibreTask.dmg",
+  LINUX_DOWNLOAD_LINK: "/downloads/LibreTask.AppImage",
+  WINDOWS_DOWNLOAD_LINK: "/downloads/LibreTask.exe",
   IOS_DOWNLOAD_LINK: "",
-  SOURCE_CODE: "https://github.com/AlgernonLabs"
+  SOURCE_CODE: "https://github.com/LibreTask"
 };
 
 exports.default = AppConstants;
@@ -49215,8 +49215,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 ProfileController.getMyProfile().then(function (profile) {
@@ -64418,8 +64418,8 @@ var _reducers2 = _interopRequireDefault(_reducers);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = (0, _reactRouterRedux.routerMiddleware)(_reactRouter.browserHistory); /*
-                                                                                    * @link https://www.algernon.io/
-                                                                                    * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                    * @link https://libretask.org/
+                                                                                    * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                     */
 
 var enhancer = (0, _redux.applyMiddleware)(_reduxThunk2.default, router);
@@ -64490,8 +64490,8 @@ var appReducer = (0, _redux.combineReducers)({
   user: _user2.default,
   routing: _reactRouterRedux.routerReducer
 }); /*
-     * @link https://www.algernon.io/
-     * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+     * @link https://libretask.org/
+     * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
      */
 
 var rootReducer = function rootReducer(state, action) {
@@ -64516,8 +64516,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /*
-                                                                                                                                                                                                                                                                   * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                   * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                   * @link https://libretask.org/
+                                                                                                                                                                                                                                                                   * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                    */
 
 exports.default = footerReducer;
@@ -64558,8 +64558,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /*
-                                                                                                                                                                                                                                                                   * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                   * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                   * @link https://libretask.org/
+                                                                                                                                                                                                                                                                   * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                    */
 
 exports.default = headerReducer;
@@ -64606,8 +64606,8 @@ var initialState = {
   profile: undefined,
   isLoggedIn: false
 }; /*
-    * @link https://www.algernon.io/
-    * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+    * @link https://libretask.org/
+    * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
     */
 
 function userReducer() {
@@ -64712,8 +64712,8 @@ exports.default = _react2.default.createElement(
 );
 //import About from "./components/About";
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 /***/ }),
@@ -64772,8 +64772,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /*
-                                                                                                                                                                                                                   * @link https://www.algernon.io/
-                                                                                                                                                                                                                   * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                   * @link https://libretask.org/
+                                                                                                                                                                                                                   * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                    */
 
 var styles = {
@@ -65006,10 +65006,10 @@ var App = function (_Component) {
               _react2.default.createElement("img", {
                 style: _styles2.default.primaryIcon,
                 src: "../images/primary.png",
-                alt: "Algernon primary icon"
+                alt: "LibreTask primary icon"
               }),
               " ",
-              "Algernon ",
+              "LibreTask ",
               _react2.default.createElement(
                 "sup",
                 { style: styles.betaText },
@@ -75925,8 +75925,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var styles = {
@@ -75991,7 +75991,7 @@ var styles = {
     fontWeight: "bold",
     textAlign: "center"
   },
-  algernonDemo: {
+  libretaskDemo: {
     width: "100%",
     height: "100%",
 
@@ -76205,9 +76205,9 @@ var Home = function (_Component) {
                 "div",
                 { style: styles.rowElementImage },
                 _react2.default.createElement(_reactBootstrap.Image, {
-                  style: styles.algernonDemo,
-                  alt: "Algernon desktop application",
-                  src: "../images/algernon_demo.gif",
+                  style: styles.libretaskDemo,
+                  alt: "LibreTask desktop application",
+                  src: "../images/libretask_demo.gif",
                   rounded: true
                 })
               )
@@ -76238,7 +76238,7 @@ var Home = function (_Component) {
                 _react2.default.createElement("img", {
                   src: "../images/list.png",
                   style: styles.featureIcon,
-                  alt: "Algernon list diagram"
+                  alt: "LibreTask list diagram"
                 }),
                 _react2.default.createElement(
                   "div",
@@ -76256,7 +76256,7 @@ var Home = function (_Component) {
                 _react2.default.createElement("img", {
                   src: "../images/sync.png",
                   style: styles.featureIcon,
-                  alt: "Algernon sync diagram"
+                  alt: "LibreTask sync diagram"
                 }),
                 _react2.default.createElement(
                   "div",
@@ -76278,7 +76278,7 @@ var Home = function (_Component) {
                 _react2.default.createElement("img", {
                   src: "../images/backup.png",
                   style: styles.featureIcon,
-                  alt: "Algernon backup diagram"
+                  alt: "LibreTask backup diagram"
                 }),
                 _react2.default.createElement(
                   "div",
@@ -76296,7 +76296,7 @@ var Home = function (_Component) {
                 _react2.default.createElement("img", {
                   src: "../images/offline.png",
                   style: styles.featureIcon,
-                  alt: "Algernon offline diagram"
+                  alt: "LibreTask offline diagram"
                 }),
                 _react2.default.createElement(
                   "div",
@@ -76516,7 +76516,7 @@ var Home = function (_Component) {
                     { href: _constants2.default.ANDROID_DOWNLOAD_LINK },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       style: _styles2.default.downloadButton,
-                      alt: "Algernon Android download image",
+                      alt: "LibreTask Android download image",
                       src: "../images/android.png",
                       rounded: true
                     })
@@ -76595,8 +76595,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var styles = {
@@ -76807,10 +76807,10 @@ var Login = function (_Component) {
           _react2.default.createElement("img", {
             style: _styles2.default.primaryIcon,
             src: "../images/primary.png",
-            alt: "Algernon primary icon"
+            alt: "LibreTask primary icon"
           }),
           " ",
-          "Algernon"
+          "LibreTask"
         ),
         _react2.default.createElement(
           "div",
@@ -79114,11 +79114,11 @@ var _ErrorCodes2 = _interopRequireDefault(_ErrorCodes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
-var API_ROOT = "localhost:3001"; //"https://algernon.io";
+var API_ROOT = "localhost:3001"; //"https://libretask.org";
 
 var MAX_RETRIES = 3;
 
@@ -79248,8 +79248,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 /*
@@ -79273,8 +79273,8 @@ exports.default = RetryableError;
 
 
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 var ErrorCodes = {
@@ -79318,8 +79318,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var Privacy = function (_Component) {
@@ -79348,12 +79348,12 @@ var Privacy = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Algernon is a task management service. This policy describes the types of personal information we may collect and how we use it to provide the Algernon service."
+            "LibreTask is a task management service. This policy describes the types of personal information we may collect and how we use it to provide the LibreTask service."
           ),
           _react2.default.createElement(
             "p",
             null,
-            "By using Algernon, you agree to the collection and use of your personal information as described in this policy. You should know:"
+            "By using LibreTask, you agree to the collection and use of your personal information as described in this policy. You should know:"
           ),
           _react2.default.createElement(
             "ul",
@@ -79377,7 +79377,7 @@ var Privacy = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "When you register with Algernon, we will request some personal information, including your email and password. Your password will be maintained on our system in a hashed form. The contents of your Algernon account are stored and maintained on Algernon servers in order to provide the service."
+            "When you register with LibreTask, we will request some personal information, including your email and password. Your password will be maintained on our system in a hashed form. The contents of your LibreTask account are stored and maintained on LibreTask servers in order to provide the service."
           ),
           _react2.default.createElement(
             "h3",
@@ -79387,7 +79387,7 @@ var Privacy = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Algernon may send you information related to your Algernon account or Algernon services. Because we believe such information is important, you will not be given the opportunity to opt-out of receiving them."
+            "LibreTask may send you information related to your LibreTask account or LibreTask services. Because we believe such information is important, you will not be given the opportunity to opt-out of receiving them."
           ),
           _react2.default.createElement(
             "h3",
@@ -79397,12 +79397,12 @@ var Privacy = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Personal information collected by Algernon may be stored and processed in the United States or any other country in which Algernon maintains facilities. By using Algernon, you consent to any such transfer of information outside of your country."
+            "Personal information collected by LibreTask may be stored and processed in the United States or any other country in which LibreTask maintains facilities. By using LibreTask, you consent to any such transfer of information outside of your country."
           ),
           _react2.default.createElement(
             "p",
             null,
-            "We reserve the right to transfer your personal information in the event of a transfer of ownership of Algernon, such as acquisition by or merger with another company. In such an event, Algernon will notify you before information is transferred and becomes subject to a different privacy policy."
+            "We reserve the right to transfer your personal information in the event of a transfer of ownership of LibreTask, such as acquisition by or merger with another company. In such an event, LibreTask will notify you before information is transferred and becomes subject to a different privacy policy."
           ),
           _react2.default.createElement(
             "h3",
@@ -79480,8 +79480,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 //import StripeCheckout from "react-stripe-checkout";
@@ -80412,8 +80412,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var styles = {
@@ -80659,10 +80659,10 @@ var Signup = function (_Component) {
           _react2.default.createElement("img", {
             style: _styles2.default.primaryIcon,
             src: "../images/primary.png",
-            alt: "Algernon primary icon"
+            alt: "LibreTask primary icon"
           }),
           " ",
-          "Algernon"
+          "LibreTask"
         ),
         _react2.default.createElement(
           "div",
@@ -80787,8 +80787,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var Terms = function (_Component) {
@@ -80822,7 +80822,7 @@ var Terms = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Welcome to Algernon! Before you create an account, you must read and agree to the ",
+            "Welcome to LibreTask! Before you create an account, you must read and agree to the ",
             _react2.default.createElement(
               "a",
               { href: "/terms" },
@@ -80840,7 +80840,7 @@ var Terms = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Although we may attempt to notify you via email of any major changes to the Agreement, you should periodically visit this page to review the most up-to-date version. Algernon, at its sole discretion, reserves the right to modify the Agreement at any time, and you agree to be bound by such modifications. If you do not accept and abide by the Agreement, you may not use Algernon."
+            "Although we may attempt to notify you via email of any major changes to the Agreement, you should periodically visit this page to review the most up-to-date version. LibreTask, at its sole discretion, reserves the right to modify the Agreement at any time, and you agree to be bound by such modifications. If you do not accept and abide by the Agreement, you may not use LibreTask."
           ),
           _react2.default.createElement(
             "h3",
@@ -80850,7 +80850,7 @@ var Terms = function (_Component) {
           _react2.default.createElement(
             "p",
             null,
-            "Algernon is a task management application (the \"Service\"). You understand and agree that the Service is provided on an AS IS and AS AVAILABLE basis. We disclaim all responsibility and liability for the availability, timeliness, security or reliability of the Service. We also reserve the right to modify, suspend or discontinue the Service with or without notice at any time and without any liability to you."
+            "LibreTask is a task management application (the \"Service\"). You understand and agree that the Service is provided on an AS IS and AS AVAILABLE basis. We disclaim all responsibility and liability for the availability, timeliness, security or reliability of the Service. We also reserve the right to modify, suspend or discontinue the Service with or without notice at any time and without any liability to you."
           )
         )
       );
@@ -80894,8 +80894,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var NotFound = function (_Component) {
@@ -81004,8 +81004,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var styles = {
@@ -81299,10 +81299,10 @@ var ConfirmPassword = function (_Component) {
           _react2.default.createElement("img", {
             style: _styles2.default.primaryIcon,
             src: "../images/primary.png",
-            alt: "Algernon primary icon"
+            alt: "LibreTask primary icon"
           }),
           " ",
-          "Algernon"
+          "LibreTask"
         ),
         _react2.default.createElement(
           "div",
@@ -81379,8 +81379,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 /*
@@ -81523,10 +81523,10 @@ var ConfirmEmail = function (_Component) {
           _react2.default.createElement("img", {
             style: _styles2.default.primaryIcon,
             src: "../images/primary.png",
-            alt: "Algernon primary icon"
+            alt: "LibreTask primary icon"
           }),
           " ",
-          "Algernon"
+          "LibreTask"
         ),
         _react2.default.createElement(
           "div",
@@ -81607,8 +81607,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://www.algernon.io/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @link https://libretask.org/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var styles = {
@@ -81856,10 +81856,10 @@ var ResetPassword = function (_Component) {
           _react2.default.createElement("img", {
             style: _styles2.default.primaryIcon,
             src: "../images/primary.png",
-            alt: "Algernon primary icon"
+            alt: "LibreTask primary icon"
           }),
           " ",
-          "Algernon"
+          "LibreTask"
         ),
         this._renderContent()
       );

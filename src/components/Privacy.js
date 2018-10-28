@@ -1,6 +1,6 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import React, { Component } from "react";
@@ -13,12 +13,12 @@ class Privacy extends Component {
         <div style={AppStyles.titleText}>Privacy Policy</div>
         <div style={AppStyles.content}>
           <p>
-            Algernon is a task management service. This policy describes the
+            LibreTask is a task management service. This policy describes the
             types of personal information we may collect and how we use it to
-            provide the Algernon service.
+            provide the LibreTask service.
           </p>
           <p>
-            By using Algernon, you agree to the collection and use of your
+            By using LibreTask, you agree to the collection and use of your
             personal information as described in this policy. You should know:
           </p>
           <ul>
@@ -33,30 +33,30 @@ class Privacy extends Component {
           </ul>
           <h3>What information do we collect and how do we use it?</h3>
           <p>
-            When you register with Algernon, we will request some personal
+            When you register with LibreTask, we will request some personal
             information, including your email and password. Your password will
             be maintained on our system in a hashed form. The contents of your
-            Algernon account are stored and maintained on Algernon servers in
+            LibreTask account are stored and maintained on LibreTask servers in
             order to provide the service.
           </p>
           <h3>How we may contact you.</h3>
           <p>
-            Algernon may send you information related to your Algernon account
-            or Algernon services. Because we believe such information is
+            LibreTask may send you information related to your LibreTask account
+            or LibreTask services. Because we believe such information is
             important, you will not be given the opportunity to opt-out of
             receiving them.
           </p>
           <h3>Transfer of information.</h3>
           <p>
-            Personal information collected by Algernon may be stored and
+            Personal information collected by LibreTask may be stored and
             processed in the United States or any other country in which
-            Algernon maintains facilities. By using Algernon, you consent to any
+            LibreTask maintains facilities. By using LibreTask, you consent to any
             such transfer of information outside of your country.
           </p>
           <p>
             We reserve the right to transfer your personal information in the
-            event of a transfer of ownership of Algernon, such as acquisition by
-            or merger with another company. In such an event, Algernon will
+            event of a transfer of ownership of LibreTask, such as acquisition by
+            or merger with another company. In such an event, LibreTask will
             notify you before information is transferred and becomes subject to
             a different privacy policy.
           </p>

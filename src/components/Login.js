@@ -1,6 +1,6 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import React, { Component } from "react";
@@ -204,9 +204,9 @@ class Login extends Component {
           <img
             style={AppStyles.primaryIcon}
             src="../images/primary.png"
-            alt="Algernon primary icon"
+            alt="LibreTask primary icon"
           />{" "}
-          Algernon
+          LibreTask
         </div>
 
         <div style={AppStyles.centerBlockContent}>

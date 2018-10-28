@@ -1,12 +1,12 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import RetryableError from "./errors/RetryableError";
 import ErrorCodes from "./errors/ErrorCodes";
 
-const API_ROOT = "http://localhost:3001"//"https://algernon.io";
+const API_ROOT = "http://localhost:3001"//"https://libretask.org";
 
 const MAX_RETRIES = 3;
 

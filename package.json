@@ -1,6 +1,6 @@
 {
-  "name": "Algernon",
-  "description": "Algernon frontend code",
+  "name": "LibreTask",
+  "description": "LibreTask frontend code",
   "version": "0.0.1",
   "proxy": "http://localhost:3001",
   "dependencies": {

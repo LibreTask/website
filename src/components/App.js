@@ -1,6 +1,6 @@
 /*
- * @link https://www.algernon.io/
- * @license https://github.com/AlgernonLabs/algernon/blob/master/LICENSE.md
+ * @link https://libretask.org/
+ * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
 import React, { Component } from "react";
@@ -217,9 +217,9 @@ class App extends Component {
               <img
                 style={AppStyles.primaryIcon}
                 src="../images/primary.png"
-                alt="Algernon primary icon"
+                alt="LibreTask primary icon"
               />{" "}
-              Algernon <sup style={styles.betaText}>beta</sup>
+              LibreTask <sup style={styles.betaText}>beta</sup>
             </div>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -285,7 +285,7 @@ class App extends Component {
           </div>
           {/*
           <div style={styles.footerText}>
-            © 2017 Algernon Labs, LLC
+            © 2017 LibreTask Labs, LLC
           </div>
           */}
         </div>
