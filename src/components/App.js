@@ -237,7 +237,7 @@ class App extends Component {
     return (
       <footer style={styles.outerFooter}>
         <div style={styles.innerFooter}>
-          {/*<div
+          <div
             className="underline_on_hover"
             style={styles.footerButton}
             onClick={() => {
@@ -245,7 +245,7 @@ class App extends Component {
             }}
           >
             About
-          </div>*/}
+          </div>
           <div className="underline_on_hover" style={styles.footerButton}>
             <a
               className="underline_on_hover"
@@ -283,11 +283,6 @@ class App extends Component {
           >
             Privacy
           </div>
-          {/*
-          <div style={styles.footerText}>
-            © 2017 LibreTask Labs, LLC
-          </div>
-          */}
         </div>
       </footer>
     );

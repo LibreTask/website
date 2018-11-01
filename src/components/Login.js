@@ -27,7 +27,7 @@ import AppStyles from "../styles";
 import * as Client from "../middleware/client";
 
 const styles = {
-  forgotPassword: {
+  resetPassword: {
     color: AppStyles.linkOnBackgroundColor,
     cursor: "pointer",
     fontSize: "110%",
@@ -228,9 +228,9 @@ class Login extends Component {
 
             <div
               className="underline_on_hover"
-              style={styles.forgotPassword}
+              style={styles.resetPassword}
               onClick={() => {
-                browserHistory.push("/forgot-password");
+                browserHistory.push("/reset-password");
               }}
             >
               Forgot your password?

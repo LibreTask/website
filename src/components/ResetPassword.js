@@ -126,7 +126,7 @@ class ResetPassword extends Component {
     return (
       <FormGroup
         style={AppStyles.form}
-        controlId="forgot-password-email-form"
+        controlId="reset-password-email-form"
         validationState={this.emailValidationState()}
       >
         <ControlLabel>Email</ControlLabel>
@@ -143,6 +143,34 @@ class ResetPassword extends Component {
       </FormGroup>
     );
   };
+
+  _signupLink = () => {
+    if (!this.props.isLoggedIn) {
+      return (<div
+        className="underline_on_hover"
+        style={AppStyles.formFooterLink}
+        onClick={() => {
+          browserHistory.push("/signup");
+        }}
+      >
+        Don't have an account? Sign up.
+      </div>)
+    }
+  }
+
+  _loginLink = () => {
+    if (!this.props.isLoggedIn) {
+      return (<div
+        className="underline_on_hover"
+        style={styles.loginText}
+        onClick={() => {
+          browserHistory.push("/login");
+        }}
+      >
+        Know your password? Log in.
+      </div>);
+    }
+  }
 
   _renderContent = () => {
     if (this.state.resetSuccess) {
@@ -177,7 +205,7 @@ class ResetPassword extends Component {
       return (
         <div>
           <div style={AppStyles.centerBlockContent}>
-            <div style={AppStyles.centeredTitleText}>Forgot Password</div>
+            <div style={AppStyles.centeredTitleText}>Reset Password</div>
             <div style={AppStyles.centerContent}>
               {this._resetPwForm()}
 
@@ -193,27 +221,11 @@ class ResetPassword extends Component {
                 Request Reset
               </Button>
 
-              <div
-                className="underline_on_hover"
-                style={styles.loginText}
-                onClick={() => {
-                  browserHistory.push("/login");
-                }}
-              >
-                Know your password? Log in.
-              </div>
+              {this._loginLink()}
             </div>
           </div>
 
-          <div
-            className="underline_on_hover"
-            style={AppStyles.formFooterLink}
-            onClick={() => {
-              browserHistory.push("/signup");
-            }}
-          >
-            Don't have an account? Sign up.
-          </div>
+          {this._signupLink()}
         </div>
       );
     }
@@ -252,7 +264,7 @@ class ResetPassword extends Component {
 }
 
 const mapStateToProps = state => ({
-  /* TODO */
+  isLoggedIn: state.user.isLoggedIn
 });
 
 const mapDispatchToProps = {

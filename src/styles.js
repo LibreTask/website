@@ -181,8 +181,8 @@ const AppStyles = {
     backgroundColor: "#3436a5",
     // TODO - replace with AppConstants.textOnMainColor
     color: "#f7fff7",
-    marginTop: 2,
-    marginBottom: 2,
+    marginTop: 5,
+    marginBottom: 5,
     borderWidth: 0,
     width: "100%",
     textTransform: "none",

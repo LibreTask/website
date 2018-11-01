@@ -148,7 +148,7 @@ class Profile extends Component {
             } else {
               this.setState(
                 {
-                  successMessage: "Profile successfully updated",
+                  successMessage: "Email successfully updated",
                   isUpdatingProfile: false
                 },
                 () => {
@@ -309,7 +309,19 @@ class Profile extends Component {
                   this._updateProfile();
                 }}
               >
-                Update Account
+                Update Email
+              </Button>
+
+              <Button
+                className="form_button"
+                style={AppStyles.formButton}
+                bsStyle="primary"
+                bsSize="large"
+                onClick={() => {
+                  browserHistory.push("/reset-password");
+                }}
+              >
+                Update Password
               </Button>
 
               <div
