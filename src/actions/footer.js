@@ -18,3 +18,12 @@ export function hide() {
     type: FOOTER_HIDE
   };
 }
+
+export const IS_DARK_FOOTER = "IS_DARK_FOOTER";
+
+export function isDarkFooter(isDark) {
+  return {
+    type: IS_DARK_FOOTER,
+    isDark: isDark
+  };
+}

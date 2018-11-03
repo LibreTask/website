@@ -91,6 +91,22 @@ const styles = {
     minWidth: 300,
     backgroundColor: AppStyles.backgroundColor
   },
+  darkOuterFooter: {
+    margin: "auto",
+    position: "relative",
+    paddingTop: 20,
+    paddingBottom: 10,
+    marginTop: -1 * AppConstants.FOOTER_HEIGHT,
+    bottom: 0,
+    backgroundColor: "black"
+  },
+  darkInnerFooter: {
+    width: "70%",
+    textAlign: "right",
+    margin: "auto",
+    minWidth: 300,
+    backgroundColor: "black"
+  },
   footerButton: {
     paddingLeft: 10,
     paddingRight: 10,
@@ -99,6 +115,16 @@ const styles = {
     display: "inline-flex",
     cursor: "pointer",
     color: AppStyles.linkOnBackgroundColor,
+    textDecoration: "none"
+  },
+  darkFooterButton: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    fontSize: "100%",
+    display: "-ms-inline-flexbox",
+    display: "inline-flex",
+    cursor: "pointer",
+    color: "white",
     textDecoration: "none"
   },
   footerText: {
@@ -112,6 +138,11 @@ const styles = {
   },
   linkText: {
     color: AppStyles.linkOnBackgroundColor,
+    textDecoration: "none",
+    display: "inline-flex"
+  },
+  darkFooterLinkText: {
+    color: "white",
     textDecoration: "none",
     display: "inline-flex"
   },
@@ -234,31 +265,34 @@ class App extends Component {
       return <div />;
     }
 
+    let linkTextStyle = (this.props.isFooterDark
+      ? styles.darkFooterLinkText : styles.linkText);
+
+    let footerButtonStyle = (this.props.isFooterDark
+      ? styles.darkFooterButton : styles.footerButton);
+
+    let outerFooterStyle = (this.props.isFooterDark
+      ? styles.darkOuterFooter : styles.outerFooter);
+
+    let innerFooterStyle = (this.props.isFooterDark
+      ? styles.darkInnerFooter : styles.innerFooter);
+
     return (
-      <footer style={styles.outerFooter}>
-        <div style={styles.innerFooter}>
-          <div
-            className="underline_on_hover"
-            style={styles.footerButton}
-            onClick={() => {
-              browserHistory.push("/about");
-            }}
-          >
-            About
-          </div>
+      <footer style={outerFooterStyle}>
+        <div style={innerFooterStyle}>
           <div className="underline_on_hover" style={styles.footerButton}>
             <a
               className="underline_on_hover"
-              style={styles.linkText}
+              style={linkTextStyle}
               href={AppConstants.SOURCE_CODE}
             >
               Source Code
             </a>
           </div>
-          <div style={styles.footerButton}>
+          <div style={footerButtonStyle}>
             <a
               className="underline_on_hover"
-              style={styles.linkText}
+              style={linkTextStyle}
               href={`mailto:${AppConstants.CONTACT_FORM_FROM_EMAIL}`}
               target="_top"
             >
@@ -267,7 +301,7 @@ class App extends Component {
           </div>
           <div
             className="underline_on_hover"
-            style={styles.footerButton}
+            style={footerButtonStyle}
             onClick={() => {
               browserHistory.push("/terms");
             }}
@@ -276,7 +310,7 @@ class App extends Component {
           </div>
           <div
             className="underline_on_hover"
-            style={styles.footerButton}
+            style={footerButtonStyle}
             onClick={() => {
               browserHistory.push("/privacy");
             }}
@@ -307,6 +341,7 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   footerIsShown: state.footer.isShown,
+  isFooterDark: state.footer.isDark,
   headerIsShown: state.header.isShown,
   profile: state.user.profile,
   isLoggedIn: state.user.isLoggedIn

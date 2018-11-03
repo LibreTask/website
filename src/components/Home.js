@@ -5,8 +5,11 @@
 
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { connect } from "react-redux";
 
 import { Button, Grid, Row, Col, Image, Table } from "react-bootstrap";
+
+import * as FooterActions from "../actions/footer";
 
 import AppConstants from "../constants";
 import AppStyles from "../styles";
@@ -30,6 +33,7 @@ const styles = {
   },
   rowElementFont: {
     paddingTop: 10,
+    color: "white",
     fontSize: "125%",
     fontWeight: "bold",
     margin: "auto",
@@ -95,27 +99,11 @@ const styles = {
     margin: "auto",
     textAlign: "center",
     paddingTop: 5,
-    paddingBottom: 20
+    paddingBottom: 5
   },
   whiteSectionSmallText: {
     color: AppStyles.textOnMainColor,
     fontSize: "100%",
-    margin: "auto",
-    textAlign: "center",
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  blackSectionSmallText: {
-    color: AppStyles.textOnMainColor,
-    fontSize: "140%",
-    margin: "auto",
-    textAlign: "center",
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  blackSectionText: {
-    color: "black",
-    fontSize: "200%",
     margin: "auto",
     textAlign: "center",
     paddingTop: 5,
@@ -129,6 +117,12 @@ const styles = {
     paddingTop: 30,
     paddingBottom: 30
   },
+  blackRowNoPadding: {
+    backgroundColor: "black",
+    margin: "auto",
+    width: "100%",
+    textAlign: "center"
+  },
   blackRow10Padding: {
     backgroundColor: "black",
     margin: "auto",
@@ -136,28 +130,6 @@ const styles = {
     textAlign: "center",
     paddingTop: 10,
     paddingBottom: 10
-  },
-  whiteRow: {
-    backgroundColor: AppStyles.backgroundColor,
-    margin: "auto",
-    width: "100%",
-    textAlign: "center",
-    paddingTop: 30,
-    paddingBottom: 30
-  },
-  whiteRowNoBottomPadding: {
-    backgroundColor: AppStyles.backgroundColor,
-    margin: "auto",
-    width: "100%",
-    textAlign: "center",
-    paddingTop: 30
-  },
-  whiteRowNoTopPadding: {
-    backgroundColor: AppStyles.backgroundColor,
-    margin: "auto",
-    width: "100%",
-    textAlign: "center",
-    paddingBottom: 30
   },
   column: {
     float: "none",
@@ -168,10 +140,14 @@ const styles = {
     float: "none",
     display: "inline-flex",
     verticalAlign: "top"
+  },
+  ruler: {
+    width: "60%"
   }
 };
 
 class Home extends Component {
+
   componentDidUpdate() {
     /*
       This code enables anchor links.
@@ -184,6 +160,14 @@ class Home extends Component {
       }
     }
   }
+
+  componentDidMount = () => {
+    this.props.setIsDarkFooter(true);
+  };
+
+  componentWillUnmount = () => {
+    this.props.setIsDarkFooter(false);
+  };
 
   render() {
     let desktopDownloadButton;
@@ -262,12 +246,16 @@ class Home extends Component {
               </div>
             </Col>
           </Row>
-          <Row style={styles.whiteRowNoBottomPadding}>
+
+          <Row style={styles.blackRowNoPadding}>
+            <hr style={styles.ruler}/>
             <Col>
-              <div style={styles.blackSectionText}>Features</div>
+              <div style={styles.whiteSectionText}>
+                Features
+              </div>
             </Col>
           </Row>
-          <Row style={styles.whiteRowNoBottomPadding}>
+          <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={8} md={4}>
               <div style={styles.rowElementContent}>
                 <img
@@ -291,7 +279,7 @@ class Home extends Component {
               </div>
             </Col>
           </Row>
-          <Row style={styles.whiteRowNoTopPadding}>
+          <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={8} md={4}>
               <div style={styles.rowElementContent}>
                 <img
@@ -312,34 +300,22 @@ class Home extends Component {
                 />
 
                 <div style={styles.rowElementFont}>Work completely offline</div>
-                {/*
-                <div style={styles.rowElementImage}>
-                  <Image
-                    alt="LibreTask open source diagram"
-                    src="../images/opensource.png"
-                    rounded
-                  />
-                </div>
-
-                <div style={styles.rowElementFont}>
-                  View the source code
-                </div>
-
-                */}
               </div>
             </Col>
+            <hr style={styles.ruler}/>
           </Row>
-          <Row style={styles.blackRow}>
+          <Row style={styles.blackRow10Padding}>
             <Col>
               <div style={styles.whiteSectionText}>Get it now</div>
               <div style={styles.whiteSectionSmallText}>No payment or signup required!</div>
             </Col>
           </Row>
-          <Row style={styles.blackRow10Padding}>
+          <Row style={styles.blackRow}>
             <Col style={styles.column} sm={6} md={4}>
               {desktopDownloadButton}
             </Col>
           </Row>
+          {/*
           <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={6} md={4}>
               <div style={styles.nonPaddedRowElementContent}>
@@ -355,7 +331,6 @@ class Home extends Component {
                 </div>
               </div>
             </Col>
-            {/*
             <Col style={styles.column} sm={6} md={3}>
               <div style={styles.rowElementContent}>
                 <div style={styles.rowElementImage}>
@@ -370,12 +345,20 @@ class Home extends Component {
                 </div>
               </div>
             </Col>
-            */}
           </Row>
+        */}
         </Grid>
       </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  /* TODO */
+});
+
+const mapDispatchToProps = {
+  setIsDarkFooter: FooterActions.isDarkFooter
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
