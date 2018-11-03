@@ -84,61 +84,6 @@ export const fetchProfile = (userId, password) => {
   return invoke(request);
 };
 
-export const upgradeAccount = (profile, stripeToken, paymentMethodId) => {
-  const request = {
-    endpoint: `/api/v1/user/upgrade-account`,
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: constructAuthHeader(profile.id, profile.password)
-    },
-    body: JSON.stringify({
-      id: profile.id,
-      stripeToken: stripeToken,
-      paymentMethodId: paymentMethodId
-    })
-  };
-
-  return invoke(request);
-};
-
-export const downgradeAccount = profile => {
-  const request = {
-    endpoint: `/api/v1/user/downgrade-account`,
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: constructAuthHeader(profile.id, profile.password)
-    },
-    body: JSON.stringify({
-      id: profile.id
-    })
-  };
-
-  return invoke(request);
-};
-
-export const updatePaymentInfo = (profile, stripeToken, paymentMethodId) => {
-  const request = {
-    endpoint: `/api/v1/user/update-payment-info`,
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: constructAuthHeader(profile.id, profile.password)
-    },
-    body: JSON.stringify({
-      id: profile.id,
-      stripeToken: stripeToken,
-      paymentMethodId: paymentMethodId
-    })
-  };
-
-  return invoke(request);
-};
-
 /*
   This should be invoked when a user requests a password reset.
 */
