@@ -372,9 +372,7 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  /* TODO */
-});
+const mapStateToProps = state => ({ });
 
 const mapDispatchToProps = {
   setIsDarkFooter: FooterActions.isDarkFooter

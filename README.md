@@ -1,15 +1,13 @@
-# Solely run the web app client
-npm start -- do this from the website directory
-  you need to move "public" into "website"
-  and, once in website, move everything into a new "src" folder except:
-      1. package.json, 2. /node_modules, 3. /public
+# LibreTask Website
 
+This is the code, primarily React/Redux, that powers the LibreTask website. The website is largely considered code-complete. Future improvements will be in the form of documentation and refining existing features.
 
-UPDATE: for now, running "npm start" alongside "webpack" is insufficient.
-to run locally, remove webpack from package.json, reinstall node_modules,
-and then run "npm start"
+#### Running locally
 
+1. Install all packages: `npm install`
+2. Run an instance locally: `npm start`
+    - For easier development, consider `open -a Google\ Chrome --args --disable-web-security --user-data-dir=""`
 
-# Dev browsers
+#### Building production bundle.js
 
-open -a Google\ Chrome --args --disable-web-security --user-data-dir=""
+1. Run `webpack`

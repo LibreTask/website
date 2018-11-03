@@ -296,9 +296,7 @@ class Signup extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  /* TODO */
-});
+const mapStateToProps = state => ({ });
 
 const mapDispatchToProps = {
   hideFooter: FooterActions.hide,

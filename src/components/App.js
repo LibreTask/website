@@ -323,8 +323,6 @@ class App extends Component {
   };
 
   render() {
-    // TODO - the title should be an image (eg linode, vultr, digital ocean)
-
     return (
       <div>
         <div style={styles.mainContent}>

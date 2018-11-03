@@ -6,7 +6,7 @@
 import RetryableError from "./errors/RetryableError";
 import ErrorCodes from "./errors/ErrorCodes";
 
-const API_ROOT = "http://localhost:3001"//"https://libretask.org";
+const API_ROOT = "https://libretask.org";
 
 const MAX_RETRIES = 3;
 
@@ -23,9 +23,6 @@ export function constructAuthHeader(userId, password) {
 // TODO - move this to its own module
 // TODO - use a hash for this
 function humanReadableError(errorCode) {
-
-  console.log("error...")
-  console.dir(errorCode)
 
   try {
     if (errorCode === ErrorCodes.USER_DOES_NOT_EXIST) {
@@ -97,8 +94,6 @@ function _invoke(fullUrl, method, headers, body) {
     })
     .then(response => response.json())
     .then(response => {
-      console.log("resonse...");
-      console.dir(response);
 
       if (response.errorCode) {
         response.errorMessage = humanReadableError(response.errorCode);
@@ -124,8 +119,5 @@ function _invoke(fullUrl, method, headers, body) {
 function _retryWait(retryAttemptNumber) {
   // TODO - refine this value
   let retryDurationMillis = 1000 * 1.5 ** retryAttemptNumber;
-
-  console.log("retrying for: " + retryDurationMillis);
-
   return new Promise(resolve => setTimeout(resolve, retryDurationMillis));
 }

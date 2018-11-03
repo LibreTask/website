@@ -18,8 +18,6 @@ import {
 
 import moment from "moment";
 
-//import StripeCheckout from "react-stripe-checkout";
-
 import * as UserActions from "../actions/user";
 import * as ProfileController from "../controllers/profile";
 

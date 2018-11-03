@@ -3,33 +3,6 @@
  * @license https://github.com/LibreTask/backend/blob/master/LICENSE.md
  */
 
-// GOOD BLACK 272727
-// GOOD WHITE eff1f3
-// GOOD GREY 696773
-/*
-
-Candidate # 1
-mainColor: '#3B3561',
-textOnMainColor: '#eaeaea',
-backgroundColor: '#eaeaea',
-textOnBackgroundColor: '#272727',
-linkOnMainColor: '#ead94c',
-linkOnBackgroundColor: '#da7373',
-hoverColor: '#615FFE',
-*/
-
-/*
-Candidate #2
-
-mainColor: '#242f40',
-textOnMainColor: '#e5e5e5',
-backgroundColor: '#e5e5e5',
-textOnBackgroundColor: '#363636',
-linkOnMainColor: '#cca43b',
-linkOnBackgroundColor: '#363636',
-hoverColor: '#615FFE',
-*/
-
 import AppConstants from "./constants";
 
 // TODO - move colors to constants, so that we can reference here?
