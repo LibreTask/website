@@ -170,7 +170,26 @@ class Home extends Component {
   };
 
   render() {
-    let desktopDownloadButton;
+
+    // temporarily default to mac
+    let desktopDownloadButton = (
+      <div style={styles.nonPaddedRowElementContent}>
+        <div style={styles.rowElementImage}>
+          <a href={AppConstants.MAC_DOWNLOAD_LINK}>
+            <Button
+              style={AppStyles.coloredDownloadButton}
+              bsStyle="primary"
+              bsSize="large"
+              onClick={() => {}}
+            >
+              Download for Mac
+            </Button>
+          </a>
+        </div>
+      </div>
+    );
+
+    /*
     if (navigator.appVersion.indexOf("Win") !== -1) {
       desktopDownloadButton = (
         <div style={styles.nonPaddedRowElementContent}>
@@ -226,7 +245,7 @@ class Home extends Component {
           </div>
         </div>
       );
-    }
+    }*/
 
     return (
       <div style={AppStyles.homePage}>
