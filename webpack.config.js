@@ -37,12 +37,30 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use:
-          "babel-loader?presets[]=es2015&presets[]=react,presets[]=stage-2"
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                '@babel/react',
+                '@babel/preset-env',
+              ],
+              plugins: [
+                  [
+                    "@babel/plugin-proposal-class-properties"
+                  ]
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.json$/,
-        use: "json-loader"
+        use: [
+          {
+            loader: "json-loader"
+          }
+        ]
       }
     ]
   },
