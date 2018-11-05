@@ -171,25 +171,8 @@ class Home extends Component {
 
   render() {
 
-    // temporarily default to mac
-    let desktopDownloadButton = (
-      <div style={styles.nonPaddedRowElementContent}>
-        <div style={styles.rowElementImage}>
-          <a href={AppConstants.MAC_DOWNLOAD_LINK}>
-            <Button
-              style={AppStyles.coloredDownloadButton}
-              bsStyle="primary"
-              bsSize="large"
-              onClick={() => {}}
-            >
-              Download for Mac
-            </Button>
-          </a>
-        </div>
-      </div>
-    );
+    let desktopDownloadButton;
 
-    /*
     if (navigator.appVersion.indexOf("Win") !== -1) {
       desktopDownloadButton = (
         <div style={styles.nonPaddedRowElementContent}>
@@ -207,7 +190,11 @@ class Home extends Component {
           </div>
         </div>
       );
-    } else if (
+    } /*
+
+      Linux currently untested. Can easily support. Just need linux machine.
+
+      else if (
       navigator.appVersion.indexOf("Linux") != -1 ||
       navigator.appVersion.indexOf("X11") != -1
     ) {
@@ -227,7 +214,7 @@ class Home extends Component {
           </div>
         </div>
       );
-    } else {
+    }*/ else {
       // default to macOS
       desktopDownloadButton = (
         <div style={styles.nonPaddedRowElementContent}>
@@ -245,7 +232,7 @@ class Home extends Component {
           </div>
         </div>
       );
-    }*/
+    }
 
     return (
       <div style={AppStyles.homePage}>
@@ -334,7 +321,6 @@ class Home extends Component {
               {desktopDownloadButton}
             </Col>
           </Row>
-          {/*
           <Row style={styles.blackRow10Padding}>
             <Col style={styles.column} sm={6} md={4}>
               <div style={styles.nonPaddedRowElementContent}>
@@ -350,6 +336,7 @@ class Home extends Component {
                 </div>
               </div>
             </Col>
+            {/*
             <Col style={styles.column} sm={6} md={3}>
               <div style={styles.rowElementContent}>
                 <div style={styles.rowElementImage}>
@@ -364,8 +351,8 @@ class Home extends Component {
                 </div>
               </div>
             </Col>
+            */}
           </Row>
-        */}
         </Grid>
       </div>
     );
